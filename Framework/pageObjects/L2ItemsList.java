@@ -18,7 +18,6 @@ public class L2ItemsList{
 	@FindBy (linkText = "Items")
 	public static WebElement btn_SideMenuTab;
 
-	
 	public void goTo () {
 		// Navigate to Accounting page
 		btn_TopMenuTab.click();
@@ -27,15 +26,14 @@ public class L2ItemsList{
 		btn_SideMenuTab.click();
 		Utility.waiting();
 	}
+	
 	 public void clickNewItemButton() {
-		
 		 btn_NewItem.click();
 		 Utility.waiting();
 		 
 	 }
-
-
-	
-	
-
+	 
+	public WebElement searchForText (String Message) {
+		return Utility.searchForText(Message);
+	}
 }

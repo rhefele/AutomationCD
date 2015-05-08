@@ -2,13 +2,13 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
   <parameter name="URL" value="https://qa-web2.dev.coredial.com"/>
-  <parameter name="Release" value="30"/>
+  <parameter name="Release" value="36"/>
     <classes>
          
    <!--  <class name="testCases.Customers"/>-->
     <!--  <class name="testCases.Sales"/> -->
-  <!-- <class name="testCases.ServiceProviders"/>-->
-     <class name="testCases.Items"/>
+		<class name="testCases.ServiceProviders"/>
+		<class name="testCases.Items"/>
        
     </classes>
   </test> <!-- Test Test-->

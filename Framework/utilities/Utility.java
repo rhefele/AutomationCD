@@ -2,9 +2,7 @@ package utilities;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import testUtilities.Constants;
@@ -16,16 +14,14 @@ public class Utility extends TestBase{
 	{
 		driver.manage().timeouts().implicitlyWait(Constants.WAIT_TIME, TimeUnit.SECONDS);
 	}
-	
-	public static WebElement txt_TextIsDisplayed (String Text)
+
+	public static WebElement searchForText (String Text)
 	{
 		element = driver.findElement(By.xpath("//*[contains(text(), '"+ Text +"')]"));
 		return element; 
 	}	
 	
-	
-	
-	public static String StringRandom (int Number) {
+	public static String stringRandom (int Number) {
 		String Line = "";
 		Random r = new Random();
 	    String alphabet = "qwertyuiopasdfghjklzxcvbnm";
@@ -35,7 +31,7 @@ public class Utility extends TestBase{
 	}
 
 	//need to improve 
-	public static String NumberRandom (int Number) {
+	public static String numberRandom (int Number) {
 		String Line = "";
 		Random r = new Random();
 	    String alphabet = "0123456789";

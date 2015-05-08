@@ -72,76 +72,87 @@ public class L2ItemEdit {
 	public static WebElement btn_Cancel;	
 
 // Methods
-	String ReccuringType = "";
+	String ReccuringType = null;
+	String ItemNumber = null; 
 
-	public void SelectMonthlyRecurringType() {
+	public void selectMonthlyRecurringType() {
 		Select Recurring = new Select(drdwn_Recurring);
 		Recurring.selectByVisibleText("Monthly Recurring Charge");
 		this.ReccuringType = "MRC";
 	}
 	
-	public void SelectNonRecurringType() {
+	public void selectNonRecurringType() {
 		Select Recurring = new Select(drdwn_Recurring);
 		Recurring.selectByVisibleText("Non Recurring Charge");
 		this.ReccuringType = "NRC";
 	}
 	
-	public void EnterItemNumber() {
-		txtbx_ItemNumber.sendKeys( ReccuringType+ " - "+ Utility.Release + Utility.StringRandom(3));
+	public void enterItemNumber() {
+		ItemNumber = ReccuringType+ " - "+ Utility.Release + Utility.stringRandom(3);
+		txtbx_ItemNumber.sendKeys(ItemNumber);
 	}
 	
-	public void EnterItemTitle() {
+	public void enterItemTitle() {
 		txtbx_ItemTitle.sendKeys( ReccuringType+ " - "+ Utility.Release);
 	}
 	
-	public void EnterItemDescription() {
+	public void enterItemDescription() {
 		txtbx_Description.sendKeys( "Description for "+ ReccuringType+ " Item - "+ Utility.Release);
 	}
 	
-	public void SelectItemTypeByIndex(int Index) {
+	public void selectItemTypeByIndex(int Index) {
 		Select ItemType = new Select(drdwn_ItemType);
 		ItemType.selectByIndex(Index);
 	}
 	
-	public void EnterPriceValue() {
+	public void enterPriceValue() {
 		txtbx_Price.clear();
-		txtbx_Price.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
+		txtbx_Price.sendKeys(Utility.numberRandom(2)+"."+Utility.numberRandom(2));
 	}
 	
-	public void EnterPriceValue(String Value) {
+	public void enterPriceValue(String Value) {
 		txtbx_Price.clear();
 		txtbx_Price.sendKeys(Value);
 	}
 	
-	public void EnterCostValue() {
+	public void enterCostValue() {
 		txtbx_Cost.clear();
-		txtbx_Cost.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
+		txtbx_Cost.sendKeys(Utility.numberRandom(2)+"."+Utility.numberRandom(2));
 	}
 	
-	public void EnterCostValue(String Value) {
+	public void enterCostValue(String Value) {
 		txtbx_Cost.clear();
 		txtbx_Cost.sendKeys(Value);
 	}
 	
-	public void EnterUsfPercentageValue() {
+	public void enterUsfPercentageValue() {
 		txtbx_UsfPercentage.clear();
-		txtbx_UsfPercentage.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
+		txtbx_UsfPercentage.sendKeys(Utility.numberRandom(2)+"."+Utility.numberRandom(2));
 	}	
 	
-	public void EnterUsfPercentageValue(String Value) {
+	public void enterUsfPercentageValue(String Value) {
 		txtbx_UsfPercentage.clear();
 		txtbx_UsfPercentage.sendKeys(Value);
 	}
 	
-	public void SelectTaxItemByIndex(int Index) {
+	public void selectTaxItemByIndex(int Index) {
 		Select TaxItem = new Select(slctbx_AvailableTaxItems);
 		TaxItem.selectByIndex(Index);
 		btn_AddItem.click();
 	}
 
-	public void SaveItem() {
+	public void clickSave() {
 		btn_Save.click(); 
 		Utility.waiting();
+	}
+	
+	public void clickCancel() {
+		btn_Cancel.click(); 
+		Utility.waiting();
 	}	
+	
+	public WebElement searchForText (String Message) {
+		return Utility.searchForText(Message);
+	}
 	
 }

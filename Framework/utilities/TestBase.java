@@ -17,6 +17,11 @@ public class TestBase {
 		driver.get(URL);
 	}
 	
+	public void closeBrowser () 
+	{
+		driver.close();
+	}
+	
 	public void setRelease(String Release) {
 		TestBase.Release = Release;
 	}
