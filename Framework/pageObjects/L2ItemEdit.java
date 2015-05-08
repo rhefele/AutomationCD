@@ -105,32 +105,32 @@ public class L2ItemEdit {
 	
 	public void EnterPriceValue() {
 		txtbx_Price.clear();
-		txtbx_Price.sendKeys(Utility.NumberRandom(2));
+		txtbx_Price.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
 	}
 	
-	public void EnterPriceValue(double Value) {
+	public void EnterPriceValue(String Value) {
 		txtbx_Price.clear();
-		txtbx_Price.sendKeys(Double.toString(Value));
+		txtbx_Price.sendKeys(Value);
 	}
 	
 	public void EnterCostValue() {
 		txtbx_Cost.clear();
-		txtbx_Cost.sendKeys(Utility.NumberRandom(2));
+		txtbx_Cost.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
 	}
 	
-	public void EnterCostValue(double Value) {
+	public void EnterCostValue(String Value) {
 		txtbx_Cost.clear();
-		txtbx_Cost.sendKeys(Double.toString(Value));
+		txtbx_Cost.sendKeys(Value);
 	}
 	
 	public void EnterUsfPercentageValue() {
 		txtbx_UsfPercentage.clear();
-		txtbx_UsfPercentage.sendKeys(Utility.NumberRandom(2));
+		txtbx_UsfPercentage.sendKeys(Utility.NumberRandom(2)+"."+Utility.NumberRandom(2));
 	}	
 	
-	public void EnterUsfPercentageValue(double Value) {
+	public void EnterUsfPercentageValue(String Value) {
 		txtbx_UsfPercentage.clear();
-		txtbx_UsfPercentage.sendKeys(Double.toString(Value));
+		txtbx_UsfPercentage.sendKeys(Value);
 	}
 	
 	public void SelectTaxItemByIndex(int Index) {
