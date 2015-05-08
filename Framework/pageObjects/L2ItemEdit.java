@@ -108,15 +108,30 @@ public class L2ItemEdit {
 		txtbx_Price.sendKeys(Utility.NumberRandom(2));
 	}
 	
+	public void EnterPriceValue(double Value) {
+		txtbx_Price.clear();
+		txtbx_Price.sendKeys(Double.toString(Value));
+	}
+	
 	public void EnterCostValue() {
 		txtbx_Cost.clear();
 		txtbx_Cost.sendKeys(Utility.NumberRandom(2));
+	}
+	
+	public void EnterCostValue(double Value) {
+		txtbx_Cost.clear();
+		txtbx_Cost.sendKeys(Double.toString(Value));
 	}
 	
 	public void EnterUsfPercentageValue() {
 		txtbx_UsfPercentage.clear();
 		txtbx_UsfPercentage.sendKeys(Utility.NumberRandom(2));
 	}	
+	
+	public void EnterUsfPercentageValue(double Value) {
+		txtbx_UsfPercentage.clear();
+		txtbx_UsfPercentage.sendKeys(Double.toString(Value));
+	}
 	
 	public void SelectTaxItemByIndex(int Index) {
 		Select TaxItem = new Select(slctbx_AvailableTaxItems);

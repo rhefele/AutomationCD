@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
   <parameter name="URL" value="https://qa-web2.dev.coredial.com"/>
-  <parameter name="Release" value="27"/>
+  <parameter name="Release" value="29"/>
     <classes>
          
    <!--  <class name="testCases.Customers"/>-->

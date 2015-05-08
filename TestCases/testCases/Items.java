@@ -36,9 +36,9 @@ public class Items extends Pages{
 	  ItemEditPage.EnterItemNumber();
 	  ItemEditPage.EnterItemTitle();
 	  ItemEditPage.EnterItemDescription();
-	  ItemEditPage.EnterPriceValue();
-	  ItemEditPage.EnterCostValue();
-	  ItemEditPage.EnterUsfPercentageValue();
+	  ItemEditPage.EnterPriceValue(45.12);
+	  ItemEditPage.EnterCostValue(9.45);
+	  ItemEditPage.EnterUsfPercentageValue(64.99);
 	  ItemEditPage.SelectItemTypeByIndex(1);
 	  ItemEditPage.SelectTaxItemByIndex(2);
 	  ItemEditPage.SaveItem();
