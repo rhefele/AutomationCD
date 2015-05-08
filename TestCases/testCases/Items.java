@@ -38,9 +38,9 @@ public class Items extends Pages{
 	  ItemEditPage.enterItemNumber();
 	  ItemEditPage.enterItemTitle();
 	  ItemEditPage.enterItemDescription();
-	  ItemEditPage.enterPriceValue("45.12");
-	  ItemEditPage.enterCostValue("9.45");
-	  ItemEditPage.enterUsfPercentageValue("64.99");
+	  ItemEditPage.enterPriceValue();
+	  ItemEditPage.enterCostValue();
+	  ItemEditPage.enterUsfPercentageValue();
 	  ItemEditPage.selectItemTypeByIndex(1);
 	  ItemEditPage.selectTaxItemByIndex(2);
 	  ItemEditPage.clickSave();
@@ -48,7 +48,7 @@ public class Items extends Pages{
   }
    
   @Test 
-  public void emptyFieldsValidation() {
+  public void FieldsValidation() {
 
 	  ItemListPage.goTo();
 	  ItemListPage.clickNewItemButton();
